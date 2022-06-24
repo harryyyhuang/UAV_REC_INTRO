@@ -1,7 +1,6 @@
 import argparse
 from pathlib import Path
 import os
-from cv2 import line
 
 import open3d as o3d
 import numpy as np
@@ -50,7 +49,11 @@ def visualize_seg(args, viz):
     scene_path = args.base_dir / Path(args.scene_name)
     scene_mesh = util.load_mesh(args.base_dir, args.scene_name)
     scene_mesh_vertices = np.asarray(scene_mesh.vertices)
-    seg_image_path = os.listdir(args.seg_out_dir / Path(args.scene_name))
+
+    if(args.seg_type == "pred"):
+        seg_image_path = os.listdir(args.seg_out_dir / Path(args.scene_name))
+    else:
+        seg_image_path = os.listdir(os.path.join(scene_path, "label-filt"))
 
     for text_id in range(1, len(seg_image_path), args.skip_nums):
 

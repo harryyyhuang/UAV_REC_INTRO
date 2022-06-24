@@ -169,11 +169,6 @@ def visualizeCameraPosition(intrinsic, pose_matrix, translation, depth_img_shape
     return line_set
 
 
-# def label_mesh(mesh_labels, vertex_frame, vertex_CC, mesh,
-#                depth_img, label_img, label_colors, linesets,
-#                viz, ids, color_img):
-
-
 def label_mesh(mesh,
                depth_img, label_img, linesets,
                vertex_on_CC, vertex_CC,
