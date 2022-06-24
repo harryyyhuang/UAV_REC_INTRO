@@ -83,12 +83,12 @@ python3 visualize_mesh.py --scene_name {scene name to visualize} --base_dir {the
 
 there few arguments that you might not be familiar, let's talk more on these things.
 
---scene_name is the scene name you want to visualize, in the data i provided, there's two type of scenes you can try out. scene0538_00 and scene0559_00
---base_dir is the base directory that store all the ground truth data i provided to you, which is ./data/scannet/ in this repository.
---seg_out_dir is the output directory of segmentation label image. There's two type of choices ./mesh_out and ./data/scannet , this argument should be choose with seg_type, if the seg_out_dir is mesh_out, seg_type should be set as pred, otherwise should be set as gt
---seg_type as describe above
---visualize_type this is to specify what you want visualize, if you simply want to visualize the mesh please set as mesh. If you want to visualize the output of prediction you should set as seg_mesh
---skip_nums is to set how much frame we want to back-project to the map, it's kind of unrealistic to back project all the image into the map, but i set 1 in the default, i recommend to use 12 instead, this means the code will skip every 12 frames to visualize one frame.
+- --scene_name is the scene name you want to visualize, in the data i provided, there's two type of scenes you can try out. scene0538_00 and scene0559_00
+- --base_dir is the base directory that store all the ground truth data i provided to you, which is ./data/scannet/ in this repository.
+- --seg_out_dir is the output directory of segmentation label image. There's two type of choices ./mesh_out and ./data/scannet , this argument should be choose with seg_type, if the seg_out_dir is mesh_out, seg_type should be set as pred, otherwise should be set as gt
+- --seg_type as describe above
+- --visualize_type this is to specify what you want visualize, if you simply want to visualize the mesh please set as mesh. If you want to visualize the output of prediction you should set as seg_mesh
+- --skip_nums is to set how much frame we want to back-project to the map, it's kind of unrealistic to back project all the image into the map, but i set 1 in the default, i recommend to use 12 instead, this means the code will skip every 12 frames to visualize one frame.
 
 There's one thing you need to be aware of, in current mode we only visualize the "segmentation class" in the mesh map, while it is simple to convert this behavior in the future.
 
