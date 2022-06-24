@@ -85,7 +85,7 @@ def load_label(scene_name: Path, img_index: int, size, seg_type: str):
         return rawCategory_to_nyu40(label, tsv_map)
 
     else:
-        return label
+        return label // 1000
 
 
 def load_pose(scene_name: Path, img_index: int):
@@ -218,7 +218,7 @@ def label_mesh(mesh,
             if(abs(Depth_Point - Depth_Img) < 0.5 and Depth_Point > 0):
                 if(label_img[vertex_each_u, vertex_each_v] != 0 and label_img[vertex_each_u, vertex_each_v] != 40):
                     mesh.vertex_colors[i] = np.array(
-                        label_colors[label_img[vertex_each_u, vertex_each_v] // 1000])/255
+                        label_colors[label_img[vertex_each_u, vertex_each_v]])/255
 
     return mesh
 

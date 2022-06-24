@@ -51,16 +51,16 @@ def visualize_seg(args, viz):
     scene_mesh_vertices = np.asarray(scene_mesh.vertices)
 
     if(args.seg_type == "pred"):
-        seg_image_path = os.listdir(args.seg_out_dir / Path(args.scene_name))
+        seg_image_path = args.seg_out_dir / Path(args.scene_name)
     else:
-        seg_image_path = os.listdir(os.path.join(scene_path, "label-filt"))
+        seg_image_path = Path(os.path.join(scene_path, "label-filt"))
 
-    for text_id in range(1, len(seg_image_path), args.skip_nums):
+    for text_id in range(1, len(os.listdir(seg_image_path)), args.skip_nums):
 
         # prepare some basic data
         depth_img = util.load_depth(scene_path, text_id)
         depth_intrinsic = util.load_intrinsic(scene_path, "depth")
-        label_img = util.load_label((args.seg_out_dir / Path(args.scene_name)),
+        label_img = util.load_label(seg_image_path,
                                     text_id, depth_img.shape, args.seg_type)
         pose_matrix, camera_translation = util.load_pose(scene_path, text_id)
 
