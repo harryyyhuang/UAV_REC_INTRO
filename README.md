@@ -53,17 +53,6 @@ which is the mesh model scannet is using, This is the high priority task you nee
 ```
 
 ```bibtex
-Bundle Fusion, this paper go through how to build a mesh map in a fast way,
-which is the mesh model scannet is using, This is the high priority task you need to do.
-@article{dai2017bundlefusion,
-  title={BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration},
-  author={Dai, Angela and Nie{\ss}ner, Matthias and Zoll{\"o}fer, Michael and Izadi, Shahram and Theobalt, Christian},
-  journal={ACM Transactions on Graphics 2017 (TOG)},
-  year={2017}
-}
-```
-
-```bibtex
 This paper has mention how to back project the 3d mesh data back into the image plane
 @article{dai2017bundlefusion,
   title={Virtual Multi-view Fusion for 3D Semantic Segmentation},
