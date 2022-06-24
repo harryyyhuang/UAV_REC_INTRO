@@ -27,6 +27,10 @@ before downloading the data
 TODO:
 draw the data directory in this README.md, but this is considered as low priority, do this in the future.
 
+If the script is not working on your system, then i assume you're using windows system, it might cause the whole coda not working, however i still provide the dropbox link for you. You can download data through dropbox website.
+
+Link: https://www.dropbox.com/sh/i0k7psmnlv9h95j/AAAlUSDYFVu8Frg369IpdaDZa?dl=0
+
 ## Papers
 
 To fully understanding this repository, there's three paper i highly recommend you to read.
